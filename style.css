@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "LCD";
+    src: url(src/LCD14.otf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "LCD"; */
+}
+
+
+body{
+    width: 100vh;
+    height: 100vh;
+    background-image: url(src/bbg.png);
+    background-repeat: no-repeat;
+    background-position-x :center;
+    background-size:cover ;
+}
+.base{
+    background-image: url(src/newcalc.png) ;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size:contain ;
+}
+.numbtns{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    left: 186px;
+    top: 281px;
+    row-gap: 1px;
+    column-gap: 6px;
+    width: fit-content;
+    height: fit-content;
+}
+.num{
+    padding: 5px;
+    border-radius: 50%;
+    /* background-color: transparent; */
+}
+.ops{
+    width: 85px;
+    position: absolute;
+    left: 72px;
+    top: 254px;
+    height: 82px;
+    border-radius: 50%;
+    background-color: rgba(36, 241, 197, 0.408);
+}
+.oprtr{
+    padding: 0px 6px;
+    position: absolute;
+    background-color: rgba(250, 235, 215,0.4);
+    color: transparent;
+}
+#mn{
+    top: 12px;
+    left: 33px;
+    padding: 2px 6px;
+}
+#pd{
+    top: 33px;
+    left: 11px;
+}
+#pl{
+    top: 33px;
+    left: 52px;
+}
+#dv{
+    top: 52px;
+    left: 31px;
+    padding: 1px 8px;
+}
+.bigbtn{
+    width: 61px;
+    height: 77px;
+    border-radius: 50%;
+    background-color: rgba(36, 241, 197, 0.408);
+}
+#ce{
+    position: absolute;
+    top: 344px;
+    left: 64px;
+}
+#eqto{
+    position: absolute;
+    top: 346px;
+    left: 364px;
+}
+#screen{
+    background-color: rgba(36, 241, 197, 0.408);
+    width: 128px;
+    height: 37px;
+    position: absolute;
+    top: 225px;
+    left: 184px;
+    border-radius: 5px;
+    transform: rotate(1deg);
+    font-size: 1.9em;
+    text-align: center;
+    overflow: hidden;
+}
+#backsp{
+    background-color: rgba(36, 241, 197, 0.408);
+    width: 88px;
+    height: 84px;
+    position: absolute;
+    top: 257px;
+    left: 336px;
+    border-radius: 50%;
+}
