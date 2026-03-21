@@ -72,6 +72,7 @@ let dottog = false;
 dot.addEventListener("click", ()=>{
     if(dottog == false){
         screen.innerText+=".";
+        screen.scrollLeft = screen.scrollWidth;
         final += ".";
         dottog = true;
     }
@@ -88,6 +89,7 @@ document.getElementById("mn").addEventListener("click", ()=>{
         screen.innerText+="-";
         final+="-";
     }
+    screen.scrollLeft = screen.scrollWidth;
     dottog = false;
 });
 document.getElementById("pl").addEventListener("click", ()=>{
@@ -99,6 +101,7 @@ document.getElementById("pl").addEventListener("click", ()=>{
         screen.innerText+="+";
         final+="+";
     }
+    screen.scrollLeft = screen.scrollWidth;
     dottog = false;
 });
 document.getElementById("pd").addEventListener("click", ()=>{
@@ -110,6 +113,7 @@ document.getElementById("pd").addEventListener("click", ()=>{
         screen.innerText+="×";
         final+="*";
     }
+    screen.scrollLeft = screen.scrollWidth;
     dottog = false;
 });
 document.getElementById("dv").addEventListener("click", ()=>{
@@ -121,6 +125,7 @@ document.getElementById("dv").addEventListener("click", ()=>{
         screen.innerText+="÷";
         final+="/";
     }
+    screen.scrollLeft = screen.scrollWidth;
     dottog = false;
 });
 
