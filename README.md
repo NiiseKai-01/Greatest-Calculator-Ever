@@ -1,4 +1,4 @@
-# My take on JS Calculator (Made with pur html, css, JS)
+# My take on JS Calculator
 Try these things-
   <li>Dragging the calculator</li>
   <li>Using keyboard to input</li>
