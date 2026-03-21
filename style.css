@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     /* font-family: "LCD"; */
+    user-select: none;
 }
 
 
@@ -18,9 +19,13 @@ body{
     background-repeat: no-repeat;
     background-position-x :center;
     background-size:cover ;
+    overflow: hidden;
 }
 .base{
-    background-image: url(src/newcalc.png) ;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-image: url(src/newcalc_2.png) ;
     width: 500px;
     height: 500px;
     display: flex;
@@ -33,17 +38,22 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     position: absolute;
-    left: 186px;
-    top: 281px;
-    row-gap: 1px;
-    column-gap: 6px;
+    left: 185px;
+    top: 279px;
+    row-gap: 2px;
+    column-gap: 5px;
     width: fit-content;
     height: fit-content;
+    transform: rotate(1deg);
 }
-.num{
-    padding: 5px;
+.butns{
+    padding: 5px 8px;
     border-radius: 50%;
-    /* background-color: transparent; */
+    background-color: transparent;
+    color: transparent;
+}
+.butns:focus{
+    outline: none;
 }
 .ops{
     width: 85px;
@@ -52,13 +62,16 @@ body{
     top: 254px;
     height: 82px;
     border-radius: 50%;
-    background-color: rgba(36, 241, 197, 0.408);
+    /* background-color: rgba(36, 241, 197, 0.408); */
 }
 .oprtr{
     padding: 0px 6px;
     position: absolute;
-    background-color: rgba(250, 235, 215,0.4);
+    background-color: transparent;
     color: transparent;
+}
+.oprtr:focus{
+    outline: none;
 }
 #mn{
     top: 12px;
@@ -82,7 +95,11 @@ body{
     width: 61px;
     height: 77px;
     border-radius: 50%;
-    background-color: rgba(36, 241, 197, 0.408);
+    background-color: transparent;
+    color: transparent;
+}
+.bigbtn:focus{
+    outline: none;
 }
 #ce{
     position: absolute;
@@ -95,24 +112,58 @@ body{
     left: 364px;
 }
 #screen{
-    background-color: rgba(36, 241, 197, 0.408);
-    width: 128px;
+    background-color: transparent;
+    width: 127px;
     height: 37px;
+    padding: 0 5px;
     position: absolute;
     top: 225px;
     left: 184px;
     border-radius: 5px;
     transform: rotate(1deg);
     font-size: 1.9em;
-    text-align: center;
-    overflow: hidden;
+    text-align: right;
+    overflow: scroll;
+    white-space: nowrap;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+}
+#screen::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
 }
 #backsp{
-    background-color: rgba(36, 241, 197, 0.408);
+    background-color: transparent;
+    color: transparent;
     width: 88px;
     height: 84px;
     position: absolute;
     top: 257px;
     left: 336px;
     border-radius: 50%;
+}
+#backsp:focus{
+    outline: none;
+}
+#giff{
+    position: absolute;
+    z-index: 2;
+    top: 218px;
+    left: 171px;
+    width: 156px;
+    height: 156px;
+    background-image: url(src/hd-smirk.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 3px 1px 7px 9px rgba(0, 0, 0, 0.28), 9px -6px 6px rgba(255, 255, 255, 0.15);
+}
+
+#giff::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 2px -1px 23px 15px rgba(0,0,0,0.8);
+    pointer-events: none;
 }
