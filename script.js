@@ -1,7 +1,7 @@
 let screen = document.getElementById("screen");
 let clear = document.getElementById("ce");
 let eqto = document.getElementById('eqto');
-let final = ""
+let final = "0"
 let giff = document.getElementById('giff');
 giff.style.height = "0px";
 let boom = new Audio("src/white_tee.mp3");
